@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оператор delete в массивах в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Дан массив:
+    let arr = ['a', 'b', 'c', 'd', 'e'];
+
+    Удалите из него два элемента. 
+    Проверьте, какое станет значение свойства length после этого. 
+    */
+    let arr = ['a', 'b', 'c', 'd', 'e'];
+    delete arr[0];
+    delete arr[1];
+    console.log(arr);
+    console.log(arr.length);
+  </script>
+</body>
+</html>
