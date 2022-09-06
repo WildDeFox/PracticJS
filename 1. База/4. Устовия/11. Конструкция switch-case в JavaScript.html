@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструкция switch-case в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Перепишите следующий код через switch-case:
+    let lang = 'ru';
+
+    if (lang == 'ru') {
+        console.log('рус');
+    } else if (lang == 'en') {
+        console.log('анг');
+    } else if (lang == 'de') {
+        console.log('нем');
+    } else {
+        console.log('язык не поддерживается');
+    }
+    */
+    const lang = 'ru';
+
+    switch(lang) {
+        case 'ru':
+            console.log('рус');
+            break;
+        case 'en':
+            console.log('анг');
+            break;
+        case 'de':
+            console.log('нем');
+            break;
+        default:
+            console.log('язык не поддерживается');
+    }
+  </script>
+</body>
+</html>

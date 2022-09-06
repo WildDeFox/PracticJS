@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функция confirm в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Спросите у пользователя, есть ли ему уже 18 лет. 
+    Если есть - выведите на экран алерт с текстом для взрослых, а если нет, 
+    выведите сообщение о том, что доступ пользователю запрещен. 
+    */
+    const ok = confirm('Есть 18?');
+
+    if (ok) {
+        console.log('Добро пожаловать');
+    } else {
+        console.log('Доступ запрещен');
+    }
+  </script>
+</body>
+</html>

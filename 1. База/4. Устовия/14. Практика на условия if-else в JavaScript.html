@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика на условия if-else в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    В переменной month лежит какое-то число из интервала от 1 до 12. 
+    Определите в какую пору года попадает этот месяц (зима, лето, весна, осень). 
+    */
+    const month = 2;
+    if (month >= 1 && month <= 2 || month == 12) {
+        alert("Зима");
+    } else if (month >= 3 && month <= 5) {
+        alert("Весна");
+    } else if (month >= 6 && month <= 8) {
+        alert("Лето");
+    } else if (month >= 9 && month <= 11) {
+        alert("Осень");
+    } else {
+        console.log('Некоректное значение')
+    }
+
+    /*
+    Дана строка, состоящая из символов, например, 'abcde'. 
+    Проверьте, что первым символом этой строки является буква 'a'. 
+    Если это так - выведите 'да', в противном случае выведите 'нет'. 
+    */
+    const str = 'abcde';
+
+    if (str[0] == 'a') {
+        console.log('Да');
+    } else {
+        console.log('Нет');
+    }
+
+    /*
+    Дано число, например, 12345. Проверьте, что первым символом этого числа 
+    является цифра 1, 2 или 3. Если это так - выведите 'да', 
+    в противном случае выведите 'нет'. 
+    */
+    const numer = 52345;
+    const str1 = String(numer);
+
+    if (str1[0] == '1' || str1[0] == '2' || str1[0] == '3') {
+        console.log('Да');
+    } else {
+        console.log('Нет');
+    }
+
+    // Дано трехзначное число. Найдите сумму цифр этого числа. 
+    const num1 = 432;
+    const str_num = String(num1);
+    const sum_num = +str_num[0] + +str_num[1] + +str_num[2];
+    console.log(sum_num);
+
+    /*
+    Дано число из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется 
+    сумме вторых трех цифр. Если это так - выведите 'да', 
+    в противном случае выведите 'нет'. 
+    */
+    const num2 = 632236;
+    const sNum = String(num2);
+
+    const sNumL = +sNum[0] + +sNum[1] + +sNum[2];
+    const sNumR = +sNum[3] + +sNum[4] + +sNum[5];
+
+    if (sNumL == sNumR) {
+        console.log('Да');
+    } else {
+        console.log('Нет');
+    }
+    
+  </script>
+</body>
+</html>
