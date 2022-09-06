@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формирование строк через циклы в JavaScript</title>
+</head>
+<body>
+  <script>
+    //  С помощью цикла сформируйте строку, заполненную 5-тью дефисами. 
+    let str = '';
+    for (let i = 0; i < 5; i++) {
+        str += '-'
+    }
+    console.log(str)
+
+    // С помощью цикла сформируйте строку '123456789'. 
+    let str1 = '';
+    for (let i = 1; i < 10; i++) {
+        str1 += i;
+    }
+    console.log(str1);
+
+    //  С помощью цикла сформируйте строку '987654321'. 
+    let str2 = ''
+    for(let i = 9; i > 0; i--) {
+        str2 += i;
+    }
+    console.log(str2)
+  </script>
+</body>
+</html>

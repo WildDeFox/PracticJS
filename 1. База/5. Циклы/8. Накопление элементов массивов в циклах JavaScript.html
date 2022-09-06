@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Накопление элементов массивов в циклах JavaScript</title>
+</head>
+<body>
+  <script>
+    const arr = [2, 5, 9, 3, 1, 4];
+    let sum = 0;
+    let sum1 = 0;
+    let sum2 = 0;
+    let num = 1;
+
+    // Найдите сумму элементов этого массива. 
+    for (let elem of arr) {
+        sum += elem;
+    }
+
+    // Найдите сумму элементов элементов, являющихся четными числами. 
+    for (let elem of arr) {
+        if (elem % 2 == 0) {
+            sum1 += elem;
+        }
+    }
+
+    // Найдите сумму квадратов элементов этого массива. 
+    for (let elem of arr) {
+        sum2 = elem ** 2;
+    }
+
+    // Найдите произведение элементов этого массива. 
+    for (let elem of arr) {
+        num *= elem;
+    }
+  </script>
+</body>
+</html>
