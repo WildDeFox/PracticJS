@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с splice</title>
+</head>
+<body>
+  <script>
+    /*
+    Дан следующий массив:
+    [1, 2, 3, 4, 5]
+
+    С помощью метода splice преобразуйте массив в следующий:
+    [1, 4, 5]
+    */
+    let arr = [1, 2, 3, 4, 5];
+    arr.splice(1, 2);
+    console.log(arr)
+
+    /*
+    Дан следующий массив:
+    [1, 2, 3, 4, 5]
+
+    С помощью метода splice сделайте из него массив:
+    [1, 2, 3, 'a', 'b', 'c', 4, 5]
+    */
+    let arr1 = [1, 2, 3, 4, 5];
+    arr1.splice(3, 0, 'a', 'b', 'c');
+    console.log(arr1);
+  </script>
+</body>
+</html>
