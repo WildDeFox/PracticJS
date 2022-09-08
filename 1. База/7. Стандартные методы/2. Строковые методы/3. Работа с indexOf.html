@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с indexOf</title>
+</head>
+<body>
+  <script>
+    // Дана строка 'abcde'. Определите позицию буквы 'c' в этой строке. 
+    let str = 'abcdea';
+    console.log(str.indexOf('c'));
+
+    //  Дана строка. Проверьте, есть ли в этой строке символ 'a'. 
+    console.log(str.indexOf('a'));
+
+    // Дана строка. Проверьте, начинается ли эта строка с символа 'a'. 
+    if (str[0] === 'a') {
+        console.log('Строка начинается с "a"');
+    }
+
+    // Дана строка. Проверьте, заканчивается ли эта строка на символ 'a'.
+    if (str.lastIndexOf('a') == str.length - 1) {
+        console.log('Строка заканчивается "a"');
+    }
+
+    // Дана строка. Проверьте, начинается ли эта строка на 'http://'. 
+    let str_last = 'http://google.com';
+    if (str_last.indexOf('http://') == 0) {
+        console.log("Строка начинается на 'http://'");
+    }
+
+  </script>
+</body>
+</html>
