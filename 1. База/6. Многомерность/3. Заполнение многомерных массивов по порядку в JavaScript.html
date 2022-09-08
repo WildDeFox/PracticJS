@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заполнение многомерных массивов по порядку в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Сформируйте с помощью двух вложенных циклов следующий массив:
+    [[1, 2], [3, 4], [5, 6], [7, 8]]
+    */
+    let arr = [];
+    let k = 1; 
+
+    for (let i = 0; i < 4; i++) {
+      arr[i] = [];
+
+      for (let j = 0; j < 2; j++) {
+        arr[i].push(k++)
+      }
+    }
+    console.log(arr)
+  </script>
+</body>
+</html>
