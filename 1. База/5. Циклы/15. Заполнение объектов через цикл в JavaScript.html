@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заполнение объектов через цикл в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Даны два массива: первый с названиями дней недели, 
+    а второй - с их порядковыми номерами:
+    let arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+    let arr2 = [1, 2, 3, 4, 5, 6, 7];
+
+    С помощью цикла создайте объект, ключами которого будут названия дней, 
+    а значениями - их номера. 
+    */
+    let arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+    let arr2 = [1, 2, 3, 4, 5, 6, 7];
+    let obj = {};
+
+    for(let i = 0; i < arr2.length; i++) {
+      obj[arr1[i]] = arr2[i];
+    }
+    console.log(obj);
+
+    /*
+    Дан объект:
+    let obj1 = {a: 1, b: 2, c: 3, d: 4, e: 5};
+
+    Переберите этот объект циклом и запишите в новый объект те элементы, 
+    которые являются четными числами. 
+    */
+    let obj1 = {a: 1, b: 2, c: 3, d: 4, e: 5};
+    let obj2 = {};
+
+    for (let key in obj1) {
+      if (obj1[key] % 2 == 0) {
+        obj2[key] = obj1[key];
+      }
+    }
+    console.log(obj2);
+
+    /*
+    Дан объект:
+    let obj3 = {a: 1, b: 2, c: 3, d: 4, e: 5};
+
+    Переберите этот объект циклом и создайте новый объект так, 
+    чтобы его ключами стали элементы старого объекта, 
+    а значениями - ключи старого объекта. 
+    */
+    let obj3 = {a: 1, b: 2, c: 3, d: 4, e: 5};
+    let obj4 = {};
+
+    for (let key in obj3) {
+        obj4[obj3[key]] = key;
+    }
+    console.log(obj4);
+  </script>
+</body>
+</html>

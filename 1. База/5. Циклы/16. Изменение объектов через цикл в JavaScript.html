@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменение объектов через цикл в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Дан объект:
+    let obj = {x: 1, y: 2, z: 3};
+
+    Переберите этот объект циклом и возведите 
+    каждый элемент этого объекта в квадрат. 
+    */
+    let obj = {x: 1, y: 2, z: 3};
+
+    for (let key in obj) {
+        obj[key] = obj[key] ** 2;
+    }
+    console.log(obj);
+  </script>
+</body>
+</html>

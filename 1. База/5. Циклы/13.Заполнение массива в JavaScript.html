@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заполнение массива в JavaScript</title>
+</head>
+<body>
+  <script>
+    // Используя цикл и метод push заполните массив числами от 1 до 10. 
+    let arr = [];
+    for (let i = 1; i < 11; i++) {
+      arr.push(i);
+    }
+    console.log(arr);
+
+    // Используя цикл и метод push заполните массив 10-ю буквами 'x'.
+    let arr1 = [];
+    for (let i = 1; i < 11; i++) {
+      arr1.push('x');
+    }
+    console.log(arr1);
+
+    /*
+    Дан массив с числами. Переберите его циклом и запишите в 
+    новый массив только положительные из чисел. 
+    */
+    let arr2 = [2, 4, 5, 6, 7, -30, -20, 50, 100];
+    let arr3 = [];
+
+    for (let elem of arr2) {
+        if (elem > 0) {
+            arr3.push(elem);
+        }
+    }
+    console.log(arr3);
+  </script>
+</body>
+</html>
