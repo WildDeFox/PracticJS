@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с рандомом</title>
+</head>
+<body>
+  <script>
+    // Выведите на экран случайное целое число от 1 до 100. 
+    function getRandomArbitary(min, max) {
+	  return +(Math.random() * (max - min) + min).toFixed();
+    }
+    console.log(getRandomArbitary(1, 100));
+
+    // С помощью цикла заполните массив 10-ю случайными целыми числами.
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+      arr.push(getRandomArbitary(1, 100));
+    }
+    console.log(arr);
+  </script>
+</body>
+</html>

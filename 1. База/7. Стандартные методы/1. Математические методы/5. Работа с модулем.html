@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с модулем</title>
+</head>
+<body>
+  <script>
+    /*
+    Даны переменные a и b. Найдите модуль разности a и b. 
+    Проверьте работу скрипта самостоятельно для различных a и b.
+    */
+
+    function getRandomArbitary(min, max) {
+	  return +(Math.random() * (max - min) + min).toFixed();
+    }
+
+    function moduleNum () {
+      const a = getRandomArbitary(1, 1000);
+      const b = getRandomArbitary(1, 1000);
+
+      return Math.abs(a - b);
+    }
+
+    console.log(moduleNum());
+    console.log(moduleNum());
+    console.log(moduleNum());
+    console.log(moduleNum());
+  </script>
+</body>
+</html>
