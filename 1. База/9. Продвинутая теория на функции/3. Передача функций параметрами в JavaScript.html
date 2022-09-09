@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Передача функций параметрами в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+     Сделайте функцию test, параметрами принимающую 3 функции. 
+     Передайте в нее первым параметром функцию, возвращающую 1, 
+     вторым - функцию, возвращающую 2, третьим - функцию, возвращающую 3. 
+     Выведите в консоль сумму результатов функций. 
+    */
+    function test (func1, func2, func3) {
+      console.log(func1() + func2() + func3());
+    }
+
+    test(
+      function() {return 1},
+      function() {return 2},
+      function() {return 3}
+    )
+  </script>
+</body>
+</html>

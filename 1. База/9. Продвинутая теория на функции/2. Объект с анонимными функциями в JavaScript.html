@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объект с анонимными функциями в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Сделайте объект с тремя функциями. Пусть первая возвращает через return 
+    число 1, вторая - число 2, третья - число 3. С помощью созданных функций 
+    выведите в консоль сумму возвращаемых чисел. 
+    */
+    const obj = {
+      func1: function() {return 1},
+      func2: function() {return 2},
+      func3: function() {return 3}
+    }
+    console.log(obj.func1() + obj.func2() + obj.func3());
+
+  </script>
+</body>
+</html>

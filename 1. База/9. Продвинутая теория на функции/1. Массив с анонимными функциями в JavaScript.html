@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Массив с анонимными функциями в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Сделайте массив arr с тремя функциями. Пусть первая возвращает 
+    через return число 1, вторая - число 2, третья - число 3. 
+    */
+    const arr = [
+      function() {return 1},
+      function() {return 2},
+      function() {return 3}
+    ]
+
+    /*
+    Переберите созданный вами массив arr циклом и 
+    выведите результаты работы всех функций в консоль. 
+    */
+    for (let func of arr) {
+      let transit = func();
+      console.log(transit);
+    }
+  </script>
+</body>
+</html>
