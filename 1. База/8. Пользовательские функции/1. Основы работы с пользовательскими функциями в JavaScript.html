@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы работы с пользовательскими функциями в JavaScript</title>
+</head>
+<body>
+  <script>
+    // Сделайте функцию, выводящую в консоль ваше имя. 
+    function myName() {
+        console.log('Nikita');
+    }
+
+    // Сделайте функцию, выводящую в консоль сумму чисел от 1 до 100. 
+    function sumNumber() {
+      let sum = 0;
+
+      for(let i = 1; i < 101; i++){
+        sum += i;
+      }
+      console.log(sum)
+    }
+    myName();
+    sumNumber();
+  </script>
+</body>
+</html>
