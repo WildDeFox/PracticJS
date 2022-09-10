@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Массив классов</title>
+</head>
+<body>
+  <p id="elem" class="www ggg zzz"></p>
+  <script>
+    // Узнайте количество его классов.
+    const el = document.querySelector('#elem');
+    const classLenght = el.classList.length;
+
+    console.log(classLenght);
+
+    //  Переберите в цикле его классы. 
+    const classArr = el.classList;
+    for (let className of classArr) {
+      document.write(className + '<br>');
+    }
+
+    // Добавьте ему класс xxx. 
+    el.classList.add('xxx');
+    console.log(el.classList)
+
+    // Удалите у него класс www
+    el.classList.remove('www');
+
+    //  Проверьте наличие у него класса ggg. 
+    el.classList.contains('ggg');
+
+    // Добавьте ему класс www, если его нет и удалите - если есть. 
+    el.classList.toggle('wwww');
+  </script>
+</body>
+</html>

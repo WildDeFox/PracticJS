@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление обработчиков в цикле в JavaScript</title>
+</head>
+<body>
+  <input type="text" value="" class="elem">
+  <input type="text" value="" class="elem">
+  <input type="text" value="" class="elem">
+  <input type="text" value="" class="elem">
+  <input type="text" value="" class="elem">
+
+  <p class="num">10</p>
+  <p class="num">20</p>
+  <p class="num">30</p>
+  <p class="num">40</p>
+  <p class="num">50</p>
+  <script>
+    /*
+    Дана следующая функция:
+    function func() {
+        this.value = Number(this.value) + 1;
+    }
+
+    Даны также инпуты. Сделайте так, чтобы по потери фокуса в любом из наших 
+    инпутов выполнялась приведенная выше функция. 
+    */
+    const inputEl = document.querySelectorAll('.elem');
+
+    for (let elem of inputEl) {
+      elem.addEventListener('click', func);
+    }
+
+    function func() {
+        this.value = Number(this.value) + 1;
+    }
+
+    /*
+    Даны абзацы с числами. Сделайте так, чтобы по клику на любой 
+    абзац его число в нем возводилось в квадрат. 
+    */
+    const pEl = document.querySelectorAll('.num');
+
+    function func1() {
+      this.textContent = Number(this.textContent) ** 2;
+    }
+
+    for (let elem of pEl) {
+      elem.addEventListener('click', func1);
+    }
+
+  </script>
+</body>
+</html>

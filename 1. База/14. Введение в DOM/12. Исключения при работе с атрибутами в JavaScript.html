@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исключения при работе с атрибутами в JavaScript</title>
+</head>
+<body>
+  <div id="elem" class="content no-gap"></div>
+  <div id="elem2" class="red padding"></div>
+  <button id="button1">Кнопка</button>
+  <button id="button2">Запись в div</button>
+  <script>
+    /*
+    Дан див:
+    <div id="elem" class="content no-gap"></div>
+
+    Дана также кнопка. По нажатию на кнопку прочитайте и выведите 
+    на экран значение атрибута class нашего дива. 
+    */
+    const el1 = document.querySelector('#elem');
+    const btn1 = document.querySelector('#button1');
+
+    btn1.addEventListener('click', function() {
+      console.log(el1.className);
+    })
+
+    /*
+    По нажатию на кнопку запишите в атрибут class дива какой-нибудь класс. 
+    */
+    const btn2 = document.querySelector('#button2');
+    const el2 = document.querySelector('#elem2');
+
+    btn2.addEventListener('click', function() {
+      el2.className += ' container'
+      console.log(el2.className);
+      let arrName = el2.className.split(' ');
+      console.log(arrName);
+    })
+  </script>
+</body>
+</html>

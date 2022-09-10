@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фокус текстовых полей в JavaScript</title>
+</head>
+<body>
+  <input type="text" value="0" id="input1">
+  <input type="text" value="0" id="input2">
+  <input type="text" value="Начальный текст" id="input3">
+  <script>
+    /*
+    Дан инпут. По получению фокуса запишите в него число 1, 
+    а по потери фокуса - число 2. 
+    */
+    const input1 = document.querySelector('#input1');
+    input1.addEventListener('focus', function() {
+      input1.value = '1';
+    })
+
+    input1.addEventListener('blur', function() {
+      input1.value = '2';
+    })
+
+    /*
+    Дан инпут. Пусть в него вводится число. 
+    По потери фокуса выведите на экран квадрат этого числа.
+    */
+    const input2 = document.querySelector('#input2');
+    input2.addEventListener('blur', function() {
+      input2.value = input2.value ** 2;
+    })
+
+    /*
+    Дан инпут, в котором изначально есть какой-то текст. 
+    По получению фокуса инпутом очистите содержимое этого инпута. 
+    */
+    const input3 = document.querySelector('#input3');
+    input3.addEventListener('focus', function() {
+      input3.value = '';
+    })
+  </script>
+</body>
+</html>

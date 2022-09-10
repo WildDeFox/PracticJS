@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стилизация элементов через атрибут style в JavaScript</title>
+</head>
+<body>
+  <div id="elem"></div>
+  <button id="button1">Задать блок</button>
+  <button id="button2">Задать цвет</button>
+  <script>
+    /*
+    Дан див и кнопка. По клику на кнопку добавьте диву ширину, высоту и границу. 
+    */
+    const btn1 = document.querySelector('#button1');
+    const elem = document.querySelector('#elem');
+
+    btn1.addEventListener('click', function() {
+      elem.style.width = '300px';
+      elem.style.height = '50px';
+      elem.style.border = '1px solid black';
+    })
+
+    //По клику установите диву размер шрифта в 20px, верхнюю границу и фон. 
+    const btn2 = document.querySelector('#button2');
+
+    btn2.addEventListener('click', function() {
+      elem.style.fontSize = '20px';
+      elem.style.marginTop = '20px';
+      elem.style.backgroundColor = 'green';
+    })
+  </script>
+</body>
+</html>

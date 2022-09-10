@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Получение группы элементов в JavaScript</title>
+</head>
+<body>
+  <p class="text">1</p>
+  <p class="text">2</p>
+  <p class="text">3</p>
+  <p class="text">4</p>
+  <p class="text">5</p>
+  <button id="button1">Вперёд</button>
+  <button id="button2">Порядковые номера</button>
+  <script>
+    /*
+    Даны абзацы и кнопка. По нажатию на кнопку найдите все абзацы, 
+    переберите из циклом и установите текст каждого абзаца в значение 'text'. 
+    */
+    const btn1 = document.querySelector('#button1');
+    const btn2 = document.querySelector('#button2')
+    const arrElem = document.querySelectorAll('.text');
+
+    btn1.addEventListener('click', function() {
+      for (let elem of arrElem) {
+        elem.textContent = 'text';
+      }
+    })
+
+    /*
+    По нажатию на кнопку запишите в конец текста 
+    каждого абзаца его порядковый номер. 
+    */
+    btn2.addEventListener('click', function() {
+      let count = 0
+      for (let elem of arrElem) {
+        elem.textContent += count;
+        count++
+      }
+    })
+  </script>
+</body>
+</html>

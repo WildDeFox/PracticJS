@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объект this в JavaScript</title>
+</head>
+<body>
+  <input type="text" value="0" id="elem">
+  <script>
+    /*
+    Дан инпут. По получению фокуса этим инпутом запишите в него число 1, 
+    а по потери фокуса - число 2. Для обращения у инпуту внутри 
+    функции-обработчика используйте объект this. 
+    */
+    const input1 = document.querySelector('#elem');
+
+    input1.addEventListener('focus', function() {
+      this.value = '1';
+    })
+
+    input1.addEventListener('blur', function() {
+      this.value = '2';
+    })
+  </script>
+</body>
+</html>
