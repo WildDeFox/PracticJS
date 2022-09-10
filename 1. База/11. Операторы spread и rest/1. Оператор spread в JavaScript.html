@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оператор spread в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Дан массив:
+    let arr = [1, 2, 3, 4, 5];
+
+    Дана также функция:
+    function func(num1, num2, num3, num4, num5) {
+	  return num1 + num2 + num3 + num4 + num5;
+    }
+
+    Найдите с помощью приведенной функции сумму элементов массива. 
+    */
+    const arr = [1, 2, 3, 4, 5];
+
+    function func(num1, num2, num3, num4, num5) {
+      return num1 + num2 + num3 + num4 + num5;
+    }
+
+    const result = func(...arr);
+    console.log(result);
+
+    // Используя Math.min и spread выведите на экран 
+    // минимальное значение массива.
+    console.log(Math.min(...arr));
+  </script>
+</body>
+</html>
