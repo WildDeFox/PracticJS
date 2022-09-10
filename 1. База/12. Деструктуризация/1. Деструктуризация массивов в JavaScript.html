@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Деструктуризация массивов в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    В следующем коде части массива записываются в соответствующие переменные:
+    let arr = ['John', 'Smit', 'development', 'programmer', 2000];
+
+    let name       = arr[0];
+    let surname    = arr[1];
+    let department = arr[2];
+    let position   = arr[3];
+    let salary     = arr[4];
+
+    Переделайте этот код через деструктуризацию согласно изученной теории. 
+    */
+    const arr = ['John', 'Smit', 'development', 'programmer', 2000];
+    const [name, surname, department, position, salary] = arr;
+    console.log(name, surname, department, position, salary);
+  </script>
+</body>
+</html>

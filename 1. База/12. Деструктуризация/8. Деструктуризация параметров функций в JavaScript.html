@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Деструктуризация параметров функций в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Переделайте следующий код через деструктуризацию согласно изученной теории:
+    function func(employee) {
+        let name       = employee[0];
+        let surname    = employee[1];
+        let department = employee[2];
+        let position   = employee[3];
+        let salary     = employee[4];
+    }
+
+    func( ['John', 'Smit', 'development', 'programmer', 2000] );
+    */
+    function func(employee) {
+      const [name, surname, department, position, salary] = employee;
+      console.log(name, surname, department, position, salary);
+    }
+
+    func(['John', 'Smit', 'development', 'progtammer', 2000]);
+  </script>
+</body>
+</html>

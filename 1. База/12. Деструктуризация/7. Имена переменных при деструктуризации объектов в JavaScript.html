@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Имена переменных при деструктуризации объектов в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    В следующем коде части объекта записываются в соответствующие переменные:
+    let options = {
+        color: 'red',
+        width:  400,
+        height: 500,
+    };
+
+    let c = options.color;
+    let w = options.width;
+    let h = options.height;
+
+    Переделайте этот код через деструктуризацию согласно изученной теории. 
+    */
+    const options = {
+      color: 'red',
+      width: 400,
+      height: 500,
+    }
+    const {color: c, width: w, height: h} = options;
+  </script>
+</body>
+</html>

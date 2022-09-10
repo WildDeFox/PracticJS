@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Остаток массива при деструктуризации в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    В следующем коде части массива записываются в соответствующие переменные:
+    let arr = ['John', 'Smit', 'development', 'programmer', 2000];
+
+    let name    = arr[0];
+    let surname = arr[1];
+
+    let info = arr.slice(2); // все элементы со второго до конца массива
+
+    Переделайте этот код через деструктуризацию согласно изученной теории. 
+    */
+    const arr = ['John', 'Smit', 'development', 'programmer', 2000];
+    const [name, surname, ...info] = arr;
+
+    console.log(info);
+  </script>
+</body>
+</html>
