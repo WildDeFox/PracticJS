@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Привязывание обработчиков к элементам в JavaScript</title>
+</head>
+<body>
+  <input id="button1" type="submit">
+  <input id="button2" type="submit">
+  <input id="button3" type="submit">
+  <script>
+    /*
+    Даны 3 кнопки:
+    <input id="button1" type="submit">
+    <input id="button2" type="submit">
+    <input id="button3" type="submit">
+
+    Сделайте так, чтобы по клику на первую кнопку на экран выводилось число 1, 
+    по клику на вторую - число 2, а по клику на третью - число 3. 
+    */
+    const button1El = document.querySelector('#button1');
+    const button2El = document.querySelector('#button2');
+    const button3El = document.querySelector('#button3');
+
+    button1El.addEventListener('click', function() {
+      alert('1');
+    })
+
+    button2El.addEventListener('click', function() {
+      alert('2');
+    })
+
+    button3El.addEventListener('click', function() {
+      alert('3');
+    })
+  </script>
+</body>
+</html>

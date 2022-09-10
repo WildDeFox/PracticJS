@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с HTML кодом элементов на JavaScript</title>
+</head>
+<body>
+  <div id="elem1">
+    <p>Hello World!</p>
+  </div>
+  <button id="button1">Кнопочка</button>
+  <script>
+    /*
+    Дан абзац и кнопка. По клику на кнопку прочитайте 
+    HTML код абзаца и выведите его в консоль. 
+    */
+    const btnEl = document.querySelector('#button1');
+    const elem = document.querySelector('#elem1');
+    btnEl.addEventListener('click', function() {
+      console.log(elem.innerHTML);
+    })
+
+    // По клику на кнопку запишите в абзац новый текст так, чтобы он был жирным. 
+    btnEl.addEventListener('click', function(){
+      elem.innerHTML = '<b>Hello World</b>'
+    })
+  </script>
+</body>
+</html>

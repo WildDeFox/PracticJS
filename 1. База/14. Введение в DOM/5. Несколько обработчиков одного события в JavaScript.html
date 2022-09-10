@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Несколько обработчиков одного события в JavaScript</title>
+</head>
+<body>
+  <p id="elem">text</p>
+  <script>
+    /*
+    Дан абзац:
+    <p id="elem">text</p>
+
+    Даны следующие функции:
+    function func1() {
+        console.log('1');
+    }
+
+    function func2() {
+        console.log('2');
+    }
+
+    function func3() {
+        console.log('3');
+    }
+
+    Привяжите все эти функции к нашему абзацу. 
+    */
+    const pEl = document.querySelector('#elem');
+    pEl.addEventListener('click', func1);
+    pEl.addEventListener('click', func2);
+    pEl.addEventListener('click', func3);
+
+    function func1() {
+        console.log('1');
+    }
+
+    function func2() {
+        console.log('2');
+    }
+
+    function func3() {
+        console.log('3');
+    }
+  </script>
+</body>
+</html>

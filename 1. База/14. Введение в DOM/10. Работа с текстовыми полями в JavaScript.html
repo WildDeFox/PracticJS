@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с текстовыми полями в JavaScript</title>
+</head>
+<body>
+    <input id="elem" value="text">
+    <button id="button">Кнопка</button>
+
+    <br>
+    <br>
+    <br>
+    <input type="text" id="elem1" value="Текст">
+    <p id="text">Тут будет текст</p>
+    <button id="button1">Кнопочка</button>
+  <script>
+    /*
+    Дан инпут:
+    <input id="elem" value="text">
+
+    Сделайте кнопку, нажатие на которую будет выводить текущий текст инпута. 
+    После захода на страницу нажмите на кнопку, чтобы увидеть текущий текст 
+    инпута, затем поредактируйте текст в инпуте и еще раз нажмите на кнопку. 
+    Убедитесь в том, что выведется новый текст инпута. 
+    */
+    const input = document.querySelector('#elem');
+    const button = document.querySelector('#button');
+
+    button.addEventListener('click', function(){
+      console.log(input.value);
+
+      // По нажатию на кнопку запишите в инпут какой-нибудь текст. 
+      input.value += '++';
+    })
+
+    
+
+    /*
+    Дан инпут, абзац и кнопка. По нажатию на кнопку запишите 
+    в абзац текст из инпута. 
+    */
+    const input1 = document.querySelector('#elem1');
+    const text1 = document.querySelector('#text');
+    const button1 = document.querySelector('#button1');
+
+    button1.addEventListener('click', function() {
+      text1.textContent = input1.value;
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Атрибуты тегов как свойства в JavaScript</title>
+</head>
+<body>
+  <input id="elem" type="email">
+  <button id="button1">Кнопочка</button>
+
+  <p id="elem1">Какой-то текст</p>
+  <a href="www.google.com" id="link1">Google</a>
+  <button id="button2">Кнопкааа</button>
+  <script>
+    /*
+    Дан следующий инпут:
+    <input id="elem" type="email">
+
+    Дана также кнопка. По нажатию на кнопку выведите на экран 
+    содержимое атрибута type указанного выше инпута. 
+    */
+    const input = document.querySelector('#elem');
+    const btnEl = document.querySelector('#button1');
+
+    btnEl.addEventListener('click', function() {
+      console.log(input.type);
+    })
+
+    // По нажатию на кнопку запишите в атрибут type значение submit. 
+    btnEl.addEventListener('click', function() {
+      input.type = 'submit';
+    })
+
+    /*
+    Пусть у вас есть ссылка в виде тега a, кнопка и абзац. 
+    По нажатию на кнопку выведите в абзац содержимое атрибута href ссылки. 
+    */
+    const elem1 = document.querySelector('#elem1');
+    const link1 = document.querySelector('#link1');
+    const button1 = document.querySelector('#button2');
+
+    button1.addEventListener('click', function() {
+      elem1.textContent = link1.href;
+    })
+  </script>
+</body>
+</html>

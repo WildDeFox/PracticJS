@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с текстом элементов на JavaScript</title>
+</head>
+<body>
+  <p class="elem1">Hello World!</p>
+  <button id="button1">Кнопка1</button>
+
+  <p id="num1">234</p>
+  <p id="num2">645</p>
+  <button id="button2">Сумма чисел</button>
+  <div>
+    <p id="sum">Сумма: </p>
+  </div>
+  <script>
+    /*
+    Дан абзац и кнопка. По клику на кнопку прочитайте текст 
+    абзаца и выведите его в консоль. 
+    */
+    const btnEl = document.querySelector('#button1');
+    const txtEl = document.querySelector('.elem1');
+    btnEl.addEventListener('click', function() {
+      console.log(txtEl.textContent);
+    })
+
+    // Дан абзац и кнопка. По клику на кнопку запишите в абзац новый текст.
+    btnEl.addEventListener('click', function() {
+      txtEl.textContent = 'Текст обновлен';
+    })
+
+    /*
+    Даны два абзаца, содержащие своим текстом какие-то числа, и кнопка. 
+    По нажатию на кнопку выведите на экран сумму хранящихся чисел. 
+    */
+    // По нажатию на кнопку запишите в текст дива сумму чисел.
+    const btn2El = document.querySelector('#button2');
+    btn2El.addEventListener('click', function() {
+      const num1El = document.querySelector('#num1').textContent;
+      const num2El = document.querySelector('#num2').textContent;
+      const sunNum = +num1El + +num2El;
+      const sumEl = document.querySelector('#sum');
+      sumEl.textContent += sunNum;
+    })
+  </script>
+</body>
+</html>
