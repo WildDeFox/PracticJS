@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Метод map для перебора массива в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Дан массив с числами. Используя метод map извлеките из каждого элемента 
+    массива квадратный корень и запишите результат в новый массив.
+    */
+    const arr = [2, 4, 6, 8, 10];
+    const result = arr.map(function(elem){
+      return elem * elem;
+    })
+    console.log(result);
+
+    /*
+    Дан массив со строками. Используя метод map в конец значению 
+    каждого элемента массива добавьте символ '!'. 
+    */
+    const arr1 = ['abc', 'bac', 'cab'];
+    const result1 = arr1.map(function(elem){
+      return elem + '!';
+    })
+    console.log(result1)
+
+    /*
+    Дан массив с числами. Используя метод map запишите в каждый элемент 
+    массива значение этого элемента, умноженное на его 
+    порядковый номер в массиве. 
+    */
+    const arr2 = [2, 4, 5, 6, 7, 8];
+    const result2 = arr2.map(function(elem, index){
+      return elem * index;
+    })
+    console.log(result2);
+  </script>
+</body>
+</html>

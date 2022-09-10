@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Метод filter для фильтрации массива в JavaScript</title>
+</head>
+<body>
+  <script>
+    // Дан массив с числами. Оставьте в нем только положительные числа. 
+    const arr = [2, 3, 4, -3, -4, 5, 6, -10, 20];
+    const result = arr.filter(elem => elem > 0);
+    console.log(result);
+
+    // Дан массив с числами. Оставьте в нем только отрицательные числа. 
+    const result1 = arr.filter(elem => elem < 0);
+    console.log(result1)
+
+    // Дан массив с числами. Оставьте в нем только числа, 
+    // которые больше нуля, но меньше 10. 
+    const result2 = arr.filter(elem => elem > 0 && elem < 10);
+    console.log(result2);
+  </script>
+</body>
+</html>
