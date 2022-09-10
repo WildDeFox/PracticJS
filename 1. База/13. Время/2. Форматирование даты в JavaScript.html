@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форматирование даты в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Выведите на экран текущую дату-время в формате 12:59:59 31.12.2014. 
+    Используйте для всех частей даты (кроме года) созданную нами функцию 
+    для добавления нуля при необходимости.
+    */
+    const date = new Date();
+
+    function addZero(num) {
+      if (num >= 0 && num <= 9) {
+        return '0' + num;
+      }
+      return num;
+    }
+
+    const time = `${date.getHours()}:${addZero(date.getMinutes())}:${addZero(date.getSeconds())} ${addZero(date.getDay())}.${addZero(date.getMonth() + 1)}.${date.getFullYear()}`;
+    document.write(time);
+  </script>
+</body>
+</html>
