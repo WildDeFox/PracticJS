@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пользовательские атрибуты в JavaScript</title>
+</head>
+
+<body>
+  <div id="elem" data-text="str">text</div>
+  <script>
+    /*
+    Сделайте так, чтобы по клику на див в конец его 
+    текста добавилось содержимое его атрибута data-text. 
+    */
+    const elem = document.querySelector('#elem');
+    elem.textContent += elem.dataset.text
+  </script>  
+</body>
+</html>

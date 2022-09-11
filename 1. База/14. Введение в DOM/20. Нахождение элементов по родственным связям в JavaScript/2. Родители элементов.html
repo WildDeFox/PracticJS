@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Родители элементов</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>text</li>
+            <li>text</li>
+            <li id="elem">text</li>
+            <li>text</li>
+            <li>text</li>
+        </ul>
+    </div>
+  <script>
+    // Найдите его родителя и задайте ему красную границу. 
+    const elem = document.querySelector('#elem');
+    const parent = elem.parentElement;
+    parent.style.borderTop = '1px solid red';
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Потомки элементов</title>
+</head>
+<body>
+  <ul id="elem">
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+  </ul>
+  <script>
+    // Найдите первого потомка элемента и сделайте его текст красного цвета. 
+    const elem = document.querySelector('#elem');
+    const firstChild = elem.firstElementChild
+    firstChild.style.color = 'red';
+
+    // Найдите последнего потомка элемента и сделайте его текст красного цвета.
+    const lastChild = elem.lastElementChild;
+    lastChild.style.color = 'red';
+    
+    // Найдите всех потомков этого элемента и добавьте им в конец текст '!'.
+    const childs = elem.children;
+    for (let child of childs) {
+      child.textContent += '!';
+    }
+  </script>
+</body>
+</html>
