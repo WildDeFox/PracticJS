@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Событие input в JavaScript</title>
+</head>
+<body>
+  <input id="elem">
+  <script>
+    /*
+    Дан инпут. Пусть в него вводится текст. Как только длина 
+    текста достигнет 5-ти, выведите на экран сообщение об этом. 
+    */
+    const elem = document.querySelector('#elem');
+
+    elem.addEventListener('input', function(){
+      let value = String(this.value);
+      if(value.length == 5) {
+        console.log('Длинна текста больше 5')
+      }
+    })
+  </script>
+</body>
+</html>

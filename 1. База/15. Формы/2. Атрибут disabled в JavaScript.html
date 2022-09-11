@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Атрибут disabled в JavaScript</title>
+</head>
+<body>
+  <input type="text" value="" id="input">
+  <button id="button1">Заблокировать</button>
+  <button id="button2">Разблокировать</button>
+  <script>
+    // Дан инпут и кнопка. По нажатию на кнопку заблокируйте инпут. 
+    const input = document.querySelector('#input');
+    const btn1 = document.querySelector('#button1');
+    const btn2 = document.querySelector('#button2');
+
+    btn1.addEventListener('click', function(){
+      input.disabled = true;
+    })
+
+    btn2.addEventListener('click', function(){
+      input.disabled = false;
+    })
+  </script>
+</body>
+</html>

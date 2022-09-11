@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с текстареа в JavaScript</title>
+</head>
+<body>
+  <textarea id="elem">text</textarea>
+  <p id="text"></p>
+  <script>
+    /*
+    Дан текстареа и абзац. По потери фокуса в 
+    текстареа запишите его текст в абзац. 
+    */
+    const elem = document.querySelector('#elem');
+    const txt = document.querySelector('#text');
+    elem.addEventListener('blur', function(){
+      txt.textContent = this.value;
+    })
+  </script>
+</body>
+</html>
