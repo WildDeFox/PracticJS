@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Остановка таймера JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    Пусть дана переменная, в которой изначально хранится число 10. 
+    Запустите таймер, который каждую секунду будет уменьшать значение 
+    этой переменной на 1 и выводить это значение в консоль. Как только 
+    значение переменной достигнет нуля - остановите таймер. 
+    */
+    let count = 10;
+    let timeInterval = setInterval(function(){
+      console.log(count--);
+      if (count === 0) {
+        clearInterval(timeInterval);
+      }
+    },1000)
+  </script>
+</body>
+</html>

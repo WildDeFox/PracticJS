@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кнопка для запуска таймера на JavaScript</title>
+</head>
+<body>
+  <button>Запуск!</button>
+  <script>
+    /*
+    Сделайте кнопку, по нажатию на которую в консоль будет 
+    выводится обратный отсчет, начиная с 100. 
+    */
+    const btn = document.querySelector('button');
+    btn.addEventListener('click', function func(){
+      let i = 100;
+      setInterval(function(){
+        console.log(i--);
+      }, 1000);
+      this.removeEventListener('click', func);
+    })
+  </script>
+</body>
+</html>
