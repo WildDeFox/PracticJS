@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Элемент события в объекте Event в JavaScript</title>
+</head>
+<body>
+  <style>
+  ul {
+    padding: 30px;
+    border: 1px solid red;
+  }
+  li {
+    list-style-type: none;
+    margin-bottom: 20px;
+    border: 1px dashed black;
+  }
+  </style>
+  <ul id="elem">
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+  </ul>
+  <script>
+    /*
+    Привяжите к тегу ul обработчик клика. В этом обработчике проверяйте с 
+    помощью свойства tagName, по какому тегу был клик. Если клик был по тегу li 
+    - добавьте в конец текста этого тега восклицательный знак. 
+    А если клик был по тегу ul - добавьте ему в конец еще один пункт списка. 
+    */
+    const ulEl = document.querySelector('#elem');
+
+    ulEl.addEventListener('click', function(event){
+      if(event.target.tagName === 'LI') {
+        event.target.textContent += '!';
+      } else if(event.target.tagName === 'UL') {
+        event.target.innerHTML += '<li>text</li>';
+      }
+    })
+  </script>
+</body>
+</html>

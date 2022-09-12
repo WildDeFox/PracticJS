@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тип события в объекте Event в JavaScript</title>
+</head>
+<body>
+  <button id="elem">text</button>
+  <script>
+    /*
+    Допишите код функции func так, чтобы при клике на элемент 
+    этот элемент красился в зеленый цвет, а при двойном клике - в красный. 
+    */
+    const elem = document.querySelector('#elem');
+
+    elem.addEventListener('click', func);
+    elem.addEventListener('dblclick', func);
+
+    function func() {
+     if (event.type == 'click') {
+      this.style.color = 'green';
+     } else if (event.type == 'dblclick') {
+      this.style.color = 'red';
+     }
+    }
+  </script>
+</body>
+</html>
