@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Создание и вставка элементов на JavaScript</title>
+</head>
+<body>
+  <ol id="elem"></ol>
+  <button>Добавить</button>
+  <script>
+    /*
+    Дан ol:
+    <ol id="elem"></ol>
+
+    Вставьте ему в конец li с текстом 'item'. 
+    */
+    const elem = document.querySelector('#elem');
+    const btn = document.querySelector('button');
+
+      // let li = document.createElement('li');
+      // li.textContent = 'item';
+      // elem.appendChild(li);
+
+    /*
+    Сделайте так, чтобы по клику на кнопку в конец списка 
+    добавлялся li с текстом 'item'. 
+    */
+    btn.addEventListener('click', function(){
+      let li = document.createElement('li');
+      li.textContent = 'item';
+      elem.appendChild(li);
+    })
+  </script>
+</body>
+</html>
