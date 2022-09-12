@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практика на создание списков ul на JavaScript</title>
+</head>
+<body>
+  <ul id="elem"></ul>
+  <script>
+    /*
+    Дан массив. Вставьте элементы этого массива в конец ul так, 
+    чтобы каждый элемент стоял в своем li. 
+    */
+    const arr = ['Text1', 'Text2', 'Text3', 'Text4'];
+    const el = document.querySelector('#elem');
+
+    for(let elem of arr) {
+      let li = document.createElement('li');
+      li.textContent = elem;
+      el.appendChild(li);
+
+      /*
+      Модифицируйте предыдущую задачу так, чтобы по клику на любой из 
+      вставленных элементов на экран выводился текст этого элемента. 
+      */
+      li.addEventListener('click', function(){
+        alert(li.textContent);
+      })
+
+      /*
+      Модифицируйте предыдущую задачу так, чтобы по 
+      клику на li ей в конец добавлялся '!'. 
+      */
+      li.addEventListener('click', function func(){
+        li.textContent += '!';
+
+        /*
+        Модифицируйте предыдущую задачу так, чтобы по повторное нажатие 
+        на li не приводило к добавлению второго '!'. 
+        */
+        li.removeEventListener('click', func);
+      })
+    }
+  </script>
+</body>
+</html>

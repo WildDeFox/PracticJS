@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Самоудаление новых элементов на JavaScript</title>
+</head>
+<body>
+  <ul id="parent">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  
+  <input type="submit" id="button">
+  <script>
+    /*
+    Сделайте так, чтобы по клику на кнопку в список добавлялся новый элемент. 
+    Сделайте так, чтобы любая li удалялась по клику на нее. Речь идет как о 
+    тех li, которые уже есть в списке, так о новых, 
+    созданных после нажатия на кнопку. 
+    */
+    const inputEl = document.querySelector('#button');
+    const parent = document.querySelector('#parent');
+
+    inputEl.addEventListener('click', function(){
+      let li = document.createElement('li');
+      li.textContent = 'Новый элемент';
+      li.addEventListener('click', func);
+      parent.appendChild(li);
+    })
+
+    const list = document.querySelectorAll('li');
+
+    for(let elem of list){
+      elem.addEventListener('click', func);
+    }
+
+    function func() {
+      this.remove();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ссылка на удаление элемента на JavaScript</title>
+</head>
+<body>
+  <div id="parent">
+    <p id="elem">text</p>
+    <a href="#" id="remove">remove</a>
+  </div>
+  <script>
+    /*
+    Делаем ссылку, с помощью которой этот абзац можно будет удалить. 
+    */
+    const pEl = document.querySelector('#elem');
+    const aEl = document.querySelector('#remove');
+
+    aEl.addEventListener('click', function(event){
+      pEl.remove();
+      event.preventDefault();
+    })
+  </script>
+</body>
+</html>
