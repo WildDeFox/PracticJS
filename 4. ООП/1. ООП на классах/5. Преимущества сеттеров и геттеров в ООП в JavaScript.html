@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Преимущества сеттеров и геттеров в ООП в JavaScript</title>
+</head>
+<body>
+  <script>
+    /*
+    В классе Employee в сеттере возраста сделайте проверку на то, 
+    что возраст должен быть от 0 до 120. 
+    */
+    class Employee {
+      #name;
+      #age;
+      #salary;
+
+      constructor(name) {
+        this.#name = name;
+      }
+
+      setAge(age) {
+        if (age >= 0 && age <= 120) {
+          this.#age = age;
+          return this;
+        } else {
+          throw new Error('Некоректный возраст');
+        }
+      }
+
+      setSalary(salary) {
+        this.#salary = salary;
+        return this;
+      }
+
+      /*
+      В геттере зарплаты сделайте так, чтобы при чтении зарплаты в 
+      конец ее значения добавлялся знак доллара. 
+      */
+      getSalary() {
+        return this.#salary + '$';
+        
+      }
+    }
+
+    const user = new Employee('Nikita');
+    user.setAge(20).setSalary(3000);
+    console.log(user.getSalary());
+  </script>
+</body>
+</html>

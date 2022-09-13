@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Классы и объекты в ООП в JavaScript</title>
+</head>
+<body>
+  <script>
+    // Сделайте класс Employee. 
+    class Employee {
+      // Сделайте метод, который выведет на экран имя работника.
+      showName(name) {
+        console.log(this.name);
+      }
+
+      // Сделайте метод, который выведет на экран зарплату работника. 
+      showSalary(salary) {
+        console.log(this.salary);
+      }
+    }
+
+    // Создайте объект класса Employee и выведите его в консоль. 
+    const emp = new Employee;
+    console.log(emp);
+
+    // В объект класса Employee запишите свойства name, age и salary. 
+    emp.name = 'Nikita';
+    emp.age = 22;
+    emp.salary = 1000000;
+
+    // Получите данные из записанных свойств и выведите их на экран. 
+    console.log(emp.name);
+    console.log(emp.age);
+    console.log(emp.salary);
+
+    // Создайте несколько объектов класса Employee. 
+    const emp1 = new Employee;
+    const emp2 = new Employee;
+
+    //  Запишите в свойство каждого работника его имя и зарплату. 
+    emp1.name = 'Alex';
+    emp1.age = '24';
+    emp1.salary = 200000;
+
+    emp2.name = 'Pavel';
+    emp2.age = '22';
+    emp2.salary = 1000000;
+
+    // Выведите на экран сумму зарплат созданных вами работников. 
+    console.log(emp1.salary + emp.salary + emp2.salary);
+
+    emp.showName();
+  </script>
+</body>
+</html>
