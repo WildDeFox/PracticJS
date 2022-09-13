@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игра угадай число на JavaScript</title>
+</head>
+<body>
+  <p>Введите число</p>
+  <input type="numbet" id="num" value="">
+  <button id="button">Угадать</button>
+  <script>
+    /*
+    В этой игре компьютер загадывает число от 1 до 100. 
+    В инпут на экране игрок вводит число от 1 до 100, 
+    пытаясь угадать, что же загадал компьютер.
+
+    Если игрок ввел число, меньше загаданного, 
+    компьютер должен написать 'введите число побольше', 
+    а если введено больше загаданного, то, соответственно, 
+    компьютер должен написать 'введите число поменьше'. 
+    */
+    function getRandomArbitary(min, max) {
+	    return +(Math.random() * (max - min) + min).toFixed();
+    }
+
+    // Угадываемое число.
+    const answer = getRandomArbitary(1, 100)
+    
+    const button = document.querySelector('#button');
+    const input = document.querySelector('#num');
+    const txt = document.querySelector('p');
+
+    button.addEventListener('click', function(){
+      const user_num = +input.value;
+      
+      if (user_num > answer){
+        txt.textContent = 'Введите число поменьше.';
+      } else if(user_num < answer) {
+        txt.textContent = 'Введите число побольше.';
+      } else if(user_num == answer) {
+        txt.textContent = 'Вы Угадали! Поздравляем!'
+      }
+    })
+    
+  </script>
+</body>
+</html>
