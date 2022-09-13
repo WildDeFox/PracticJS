@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чеклист на JavaScript</title>
+</head>
+<body>
+  <style>
+    body {
+      text-align: center;
+    }
+    #input, #list {
+      display: inline-block;
+    }
+    #list {
+      padding: 0;
+      list-style-type: none;
+    }
+    #list span {
+	    margin-right: 5px;
+    }
+    #list .remove, #list .mark {
+	    color: blue;
+	    cursor: pointer;
+    }
+    #list .remove:hover, #list .mark:hover {
+	    text-decoration: underline;
+    }
+    #list .done {
+	    text-decoration: line-through;
+    }
+  </style>
+  <div>
+    <input id="input">
+  </div>
+  
+  <ul id="list"></ul>
+  <script>
+    const input = document.querySelector('#input');
+    const list = document.querySelector('#list');
+
+    input.addEventListener('keypress', function(event) {
+      if (event.key == 'Enter') {
+        let li = document.createElement('li');
+
+        // Создаем спан с задачей
+        let task = document.createElement('span');
+        task.classList.add('task');
+        task.textContent = this.value;
+
+        // По двойному клику редактируем текст.
+        task.addEventListener('dblclick', function func(){
+          // Создаем инпут
+          let input1 = document.createElement('input');
+          
+          // Записываем в инпут текст элемента
+          input1.value = task.textContent;
+          task.textContent = '';
+          task.appendChild(input1);
+
+          // При потери фокуса записываем новую задачу и убераем инпут
+          input1.addEventListener('blur', function(){
+            task.textContent = this.value;
+            task.addEventListener('click', func)
+          })
+
+          task.removeEventListener('click', func);
+
+        })
+        li.appendChild(task);
+
+        // Добавляем спан для удаление задачи
+        let remove = document.createElement('span');
+        remove.classList.add('remove');
+        remove.textContent = 'Удалить';
+        remove.addEventListener('click', function(){
+          li.remove();
+        })
+        li.appendChild(remove);
+
+        // Добавляем спан для отметки о сделанной задачи
+        let mark = document.createElement('span');
+        mark.classList.add('mark');
+        mark.textContent = 'Сделано';
+        mark.addEventListener('click', function(){
+          task.classList.add('done')
+        })
+        li.appendChild(mark);
+
+        list.appendChild(li);
+
+        this.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
