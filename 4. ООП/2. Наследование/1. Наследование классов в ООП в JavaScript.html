@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наследование классов в ООП в JavaScript</title>
+</head>
+<body>
+  <script>
+    class User {
+      setName(name) {
+        this.name = name;
+      }
+
+      getName(){
+        return this.name;
+      }
+    }
+
+    class Employee extends User {
+      setSalary(salary){
+        this.salary = salary;
+      }
+
+      getSalary(){
+        return this.salary;
+      }
+    }
+
+    const employee = new Employee;
+    employee.setName('Nikita');
+    console.log(employee.getName());
+    employee.setSalary('2000000');
+    console.log(employee.getSalary());
+  </script>
+</body>
+</html>
