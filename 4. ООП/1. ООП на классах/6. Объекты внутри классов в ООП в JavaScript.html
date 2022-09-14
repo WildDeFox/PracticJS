@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Объекты внутри классов в ООП в JavaScript</title>
+</head>
+<body>
+  <script>
+    class User {
+	    constructor(name) {
+        this.name = name;
+      }
+    }
+
+    class Employee {
+      constructor(name, position, department) {
+        this.name = name;
+        this.position = position;
+        this.department = department;
+      }
+    }
+    const user = new User('Nikita');
+    const employee = new Employee(user, 'middle', 'developer');
+    console.log(employee.user.name)
+  </script>
+</body>
+</html>

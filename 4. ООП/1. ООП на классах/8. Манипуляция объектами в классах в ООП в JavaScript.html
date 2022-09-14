@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Манипуляция объектами в классах в ООП в JavaScript</title>
+</head>
+<body>
+  <script>
+    class Employee {
+      #name;
+      #salary;
+      
+      constructor(name, salary){
+        this.#name = name;
+        this.#salary = salary;
+      }
+
+      getName() {
+        return this.#name;
+      }
+
+      getSalary() {
+        return this.#salary;
+      }
+    }
+
+    // Сделайте класс EmployeesCollection, 
+    // который будет содержать массив работников. 
+    class EmployeesCollection {
+      #employees;
+
+      constructor() {
+        this.#employees = []
+      }
+
+      // Сделайте в этом классе метод для добавления нового работника. 
+      addEmployee(employee) {
+        this.#employees.push(employee);
+      }
+
+      // Сделайте в этом классе метод для вывода всех работников.
+      show() {
+        for(let employee of this.#employees) {
+          console.log(employee.getName());
+        }
+      }
+
+      // Mетод для расчета суммарной зарплаты всех работников.
+      sumSalary(){
+        let sum = 0;
+        for(let employee of this.#employees) {
+          sum += employee.getSalary()
+        }
+        return sum;
+      }
+
+      // Сделайте в этом классе метод для расчета 
+      // средней зарплаты всех работников. 
+      mediumSalary() {
+        const allSalary = this.sumSalary();
+        const allEmp = this.#employees.length;
+        return allSalary / allEmp;
+      }
+    }
+
+    let us = new EmployeesCollection;
+    us.addEmployee(new Employee('Nikita', 1000));
+    us.addEmployee(new Employee('Leonardo', 2000));
+    us.addEmployee(new Employee('Oleg', 3000));
+
+    us.show();
+    console.log(us.sumSalary());
+    console.log(us.mediumSalary());
+  </script>
+</body>
+</html>

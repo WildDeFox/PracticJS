@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Массивы объектов в ООП в JavaScript</title>
+</head>
+<body>
+  <script>
+    class Employee {
+      #name;
+      #salary;
+
+      constructor(name, salary) {
+        this.#name = name;
+        this.#salary = salary;
+      }
+
+      getEmploy() {
+        return this.#name + this.#salary;
+      }
+    }
+
+    let emps = [
+      new Employee('Nikita', 20000),
+      new Employee('Oleg', 1000),
+      new Employee('Kris', 6000),
+    ]
+
+    for (let emp of emps){
+      console.log(emp.getEmploy())
+    }
+  </script>
+</body>
+</html>
